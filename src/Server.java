@@ -7,7 +7,9 @@ public class Server {
 		System.out.println("Server is running.");
 		try{
 			while(true) {
-				System.out.println("Hey");
+				Game game = new Game();
+				Player player1 = new Player(listener.accept(), 'X');
+				Player player2 = new Player(listener.accept(), 'F');
 			}
 		} finally{
 			listener.close();
